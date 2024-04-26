@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for Contact Us page */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #F5F5F5; /* Use the same background color as the About Us page */
+            text-align: center;
+        }
+        .contact-box {
+            background-color: #FFFFFF; /* Background color for the contact box */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%; /* Adjust max-width for responsiveness */
+            margin: 0 auto;
+        }
+        .contact-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+            text-align: left; /* Adjust alignment for form labels */
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00B59F;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #028E77;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="header-links">
+            <a href="about-us.html" class="header-link">About Us</a>
+            <a href="#" class="header-link">Contact Us</a>
+        </div>
+        <span class="app-name">PalitasPR</span>
+        <a href="signup.html" class="login-button">Sign up</a>
+    </div>
+</header>
+
+<div class="contact-section">
+    <div class="contact-box">
+        <h2 class="contact-title">Contact Us</h2>
+        <form onsubmit="handleContactForm(); return false;" class="space-y-4">
+            <div>
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" class="form-input" required>
+            </div>
+            <div>
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="john.doe@example.com" class="form-input" required>
+            </div>
+            <div>
+                <label for="message" class="form-label">Message</label>
+                <textarea name="message" id="message" rows="5" placeholder="Enter your message..." class="form-input" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<div class="mt-2 text-sm text-gray-600 text-center">
+    <p>Return to <a href="about-us.html" style="color: gray; transition: color 0.3s ease;">About Us</a> | Already have an account? <a href="login.html" style="color: gray; transition: color 0.3s ease;">Log in</a></p>
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+    function handleContactForm() {
+        // Handle form submission logic here
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // For demonstration purposes, log the form data
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        // Clear form fields after submission
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+
+        // Display success or redirect to a confirmation page
+        alert('Message sent successfully!');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="header-links">
+            <a href="about-us.html" class="header-link">About Us</a>
+            <a href="contact-us.html" class="header-link">Contact Us</a>
+        </div>
+        <span class="app-name">PalitasPR</span>
+        <a href="login.html" class="login-button">Login</a>
+    </div>
+</header>
+
+<div class="login-container">
+    <div class="login-box">
+        <div class="mb-8 text-center">
+            <h1 class="my-3 text-4xl font-bold" style="color: #00B59F;">Sign up</h1>
+            <p class="text-sm text-gray-600">Create an account to get started</p>
+        </div>
+        <p id="error-message" class="mb-4 error-message"></p>
+        <form onsubmit="handleSignup(); return false;" class="space-y-4">
+            <div>
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" class="form-input" required>
+            </div>
+            <div>
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" id="email" placeholder="john.doe@example.com" class="form-input" required>
+            </div>
+            <div>
+                <label for="confirm-email" class="form-label">Confirm Email</label>
+                <input type="email" name="confirm-email" id="confirm-email" placeholder="Confirm email" class="form-input" required>
+            </div>
+            <div class="position-relative">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" placeholder="**********" class="form-input" required
+                       onfocus="showPasswordRequirements()">
+                <p id="password-requirements" class="password-requirements">
+                    Password must be 8-15 characters, contain at least one capital letter, and at least one number.
+                </p>
+            </div>
+            <div class="position-relative">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="**********" class="form-input" required
+                       onfocus="showConfirmPasswordMessage()">
+                <p id="confirm-password-message" class="confirm-password-message">
+                    Password must be 8-15 characters, contain at least one capital letter, and at least one number.
+                </p>
+            </div>
+            <button type="submit" class="submit-button">Sign up</button>
+        </form>
+        <div class="mt-2 text-sm text-gray-600">
+            Already have an account? <a href="login.html" style="color: #00B59F;" class="text-sm" id="login-link">Log in</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    function handleLogin() {
+        // Add login handling logic here
+        console.log('Login button clicked.');
+        // Redirect to login page
+        window.location.href = 'login.html';
+    }
+</script>
+
+</body>
+</html>

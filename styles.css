@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #26262C;
+    color: #FFFFFF; /* Set default text color to white */
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #26262C;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    margin-right: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: #00B59F;
+}
+
+.app-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 20px; /* Adjusted margin */
+    transition: color 0.3s ease;
+}
+
+.app-name:hover {
+    color: #00B59F;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #393E46;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #028E77;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.login-box {
+    background-color: #F5F5F5; /* Lighter gray background */
+    color: #333; /* Text color inside the box */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%; /* Adjust max-width for responsiveness */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #FF0000;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00B59F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #028E77;
+}
+
+.text-sm {
+    margin-top: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* Apply styles to the password requirements and confirm password messages */
+.password-requirements, .confirm-password-message {
+    position: absolute;
+    top: calc(100% + 10px); /* Position below the input with additional spacing */
+    left: 0;
+    width: 100%;
+    padding-top: 5px; /* Add padding to separate from input */
+    font-size: 12px;
+    color: #00B59F;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform property */
+    transform: translateY(10px); /* Start position for animation */
+}
+
+.position-relative:hover .password-requirements, .position-relative:hover .confirm-password-message {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* End position for animation */
+    animation: slideIn 0.3s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Start position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
